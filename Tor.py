@@ -6,6 +6,8 @@ import stem.process
 from stem.util import term
 
 SOCKS_PORT = 7000
+print("Send Query to atagar server via tor")
+location_code = '{'+str(input("Enter target country domain, use ru for russia"))+'}'
 
 
 def query(url):
@@ -41,7 +43,7 @@ print(term.format("Starting Tor:\n", term.Attr.BOLD))
 tor_process = stem.process.launch_tor_with_config(
   config = {
     'SocksPort': str(SOCKS_PORT),
-    'ExitNodes': '{ru}',
+    'ExitNodes': location_code,
   },
   init_msg_handler = print_bootstrap_lines,
 )
