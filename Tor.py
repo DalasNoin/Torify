@@ -7,7 +7,7 @@ from stem.util import term
 
 SOCKS_PORT = 7000
 print("Send Query to atagar server via tor")
-location_code = '{'+str(input("Enter target country domain, use ru for russia"))+'}'
+location_code = '{'+raw_input("Enter target country domain, use ru for russia: ")+'}'
 
 
 def query(url):
