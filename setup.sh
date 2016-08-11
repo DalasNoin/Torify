@@ -7,4 +7,4 @@ sudo apt-get update
 echo Y | sudo apt-get install tor deb.torproject.org-keyring
 sudo pip install stem
 
-sudo python Torify.py
+sudo python Tor.py
